@@ -1,35 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+.drink-section {
+  margin: 0 auto;
+  width: 96%;
+}
+
 .section-category {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: space-between;
 }
 
 .section-header {
-  margin-left: 5%;
+  margin-left: 2%;
   padding-bottom: 0;
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 .section-options {
   font-size: 16px;
   font-weight: 300;
-  margin: 0 0 0 5%;
+  margin: 0 0 0 2%;
+}
+
+.extra-header {
+  margin: 0 0 20px 5%;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 1px solid black;
 }
 
 .extra-item-list {
-  margin: 0;
+  margin: 0 0 0 5%;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .extra-section {
-  margin: 0 0 0 5%;
-  display: flex;
-  flex-direction: column;
-  height: 100px;
+  margin: 0 0 0 1%;
+  height: 130px;
+  width: 300px;
 }
 
 .extra-item {
+  width: 40%;
   list-style-type: none;
   margin-right: 10%;
+}
+
+.extra-top {
+  display: flex;
+  align-items: center;
+}
+
+.extra-description {
+  margin: 0 0 20px 40px;
+  font-style: italic;
+}
+
+@media (max-width: 550px) {
+  .section-header .section-options {
+    margin: 0 0 0 5%;
+  }
 }

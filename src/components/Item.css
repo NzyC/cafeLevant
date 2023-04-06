@@ -16,6 +16,7 @@
 h1 {
   font-size: 16px;
   margin-left: 10px;
+  font-weight: 500;
 }
 
 .item-description {
@@ -35,7 +36,7 @@ h1 {
   display: flex;
   position: absolute;
   top: 70%;
-  left: 10%;
+  left: 5%;
 }
 
 

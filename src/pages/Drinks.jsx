@@ -2,6 +2,7 @@ import React from "react";
 import "./Drinks.css";
 import currImg from "../assets/Avocado Sourdough.jpg";
 import Item from "../components/Item";
+import HulmLogo from "../assets/hulmStudionsLogo.png"
 
 function Drinks() {
   const specialtyTeas = [
@@ -340,7 +341,7 @@ function Drinks() {
       price: 7.5,
     },
     {
-      id: 39,
+      id: 40,
       name: "GREEN MACHINE",
       description: "Celery, green apple, spinach cucumber, lemon",
       price: 7.5,
@@ -355,7 +356,7 @@ function Drinks() {
       <br />
       <br />
       <br />
-      <h2 className="section-header">SPECIALTY TEAS</h2>
+      <h2 className="section-header">Specialty Teas</h2>
       <h3 className="section-options">Dine | Take-away</h3>
       <div className="section-category">
         {specialtyTeas.map((drink) => (
@@ -425,7 +426,10 @@ function Drinks() {
       </div>
 
       <div className="extra-section">
-        <h1>Alternative Milks</h1>
+        <div className="extra-top">
+          <h1 className="extra-header">Alternative Milks</h1>
+          <p className="extra-description">+0.5</p>
+        </div>
         <ul className="extra-item-list">
           <li className="extra-item">Soy</li>
           <li className="extra-item">Almond</li>
@@ -434,6 +438,73 @@ function Drinks() {
           <li className="extra-item">Lactose Free</li>
         </ul>
       </div>
+
+      <h2 className="section-header">Smoothies</h2>
+      <div className="section-category">
+        {smoothies.map((drink) => (
+          <Item
+            currImg={currImg}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
+
+      <h2 className="section-header">Frappe's</h2>
+      <h3 className="section-options">Dine | Take-away</h3>
+      <div className="section-category">
+        {frappe.map((drink) => (
+          <Item
+            currImg={currImg}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
+
+      <h2 className="section-header">Juices</h2>
+      <h3 className="section-options">Dine | Take-away</h3>
+      <div className="section-category">
+        {juices.map((drink) => (
+          <Item
+            currImg={currImg}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
+
+      <div className="extra-section">
+        <ul className="extra-item-list">
+          <li className="extra-item">Extras +0.5</li>
+          <li className="extra-item">Protein +1</li>
+        </ul>
+      </div>
+
+      <div className="footer">
+          <div className="break"></div>
+          <figure className="hulm-logo-wrapper">
+            Powered by <img className="hulm-logo" src={HulmLogo} alt="" />
+          </figure>
+          <p className="hulm-logo-description">
+            Convergence of culture, creativity and branding.
+          </p>
+          <a
+            href="https://theright.fit/talent/hulm-studios"
+            className="learn-more"
+            target="_blank"
+          >
+            Learn More
+          </a>
+          <br />
+          <br />
+        </div>
     </div>
   );
 }
