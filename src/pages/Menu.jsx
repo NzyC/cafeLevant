@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import HulmLogo from "../assets/hulmStudionsLogo.png";
 import dessertCover from "../assets/dessert-cover.jpg";
@@ -46,9 +46,34 @@ function Menu() {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  setTimeout(() => {
-    setIsLoading(false)
-  }, 3000)
+  useEffect(() => {
+    function allImagesLoaded() {
+      const images = document.getElementsByTagName("img");
+      for (let i = 0; i < images.length; i++) {
+        if (!images[i].complete) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function handleImageLoad() {
+      if (allImagesLoaded()) {
+        setIsLoading(false);
+      }
+    }
+
+    const images = document.getElementsByTagName("img");
+    for (let i = 0; i < images.length; i++) {
+      images[i].addEventListener("load", handleImageLoad);
+    }
+
+    return () => {
+      for (let i = 0; i < images.length; i++) {
+        images[i].removeEventListener("load", handleImageLoad);
+      }
+    };
+  }, []);
 
   return (
     <div className="flex">
@@ -90,9 +115,9 @@ function Menu() {
                   <img className="cover" src={item.url} alt="" />
                 </div>
               )}{" "}
-              <a className="cover-name" href="">
+              <p className="cover-name" href="">
                 {item.name}
-              </a>
+              </p>
               <br />
               <br />
               <br />
