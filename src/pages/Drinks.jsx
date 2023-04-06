@@ -453,7 +453,6 @@ function Drinks() {
       </div>
 
       <h2 className="section-header">Frappe's</h2>
-      <h3 className="section-options">Dine | Take-away</h3>
       <div className="section-category">
         {frappe.map((drink) => (
           <Item
@@ -467,7 +466,6 @@ function Drinks() {
       </div>
 
       <h2 className="section-header">Juices</h2>
-      <h3 className="section-options">Dine | Take-away</h3>
       <div className="section-category">
         {juices.map((drink) => (
           <Item
