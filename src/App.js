@@ -4,9 +4,9 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Menu from "./pages/Menu";
 import Drinks from "./pages/Drinks";
+import { useState } from "react";
 
 function App() {
-
   return (
     <Router>
       <Nav />

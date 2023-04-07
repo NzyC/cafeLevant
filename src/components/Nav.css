@@ -22,11 +22,25 @@
   width: 100%;
 }
 
-.side-menu {
+.side-menu-wrapper {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.back-icon {
+  color: #503838;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 40%;
+  transform: scale(1.4);
+}
+
+.back-icon:hover {
+  transform: scale(1.6);
+  transition: all 300ms ease-in-out;
 }
 
 .side-menu-icon {
@@ -38,5 +52,96 @@
 .side-menu-icon:hover {
   transform: scale(1.6);
   transition: all 300ms ease-in-out;
+}
 
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -20%;
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.side-menu.open {
+  left: 0;
+  opacity: 1;
+  z-index: 100;
+}
+
+.restOfTheScreen {
+  position: absolute;
+  background-color: black;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: none;
+}
+
+.menu-links {
+  color: black;
+  width: 100%;
+  height: 20px;
+  transition: all 300ms ease;
+}
+
+.menu-links:hover {
+  color: lightgray;
+}
+
+.openRest {
+  opacity: 0.8;
+  z-index: 90;
+  display: block;
+}
+
+.clear-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  transform: scale(1.4);
+}
+
+.clear-icon:hover {
+  transform: scale(1.4) rotate(180deg);
+  transition: all 300ms ease;
+}
+
+.menu-review {
+  position: absolute;
+  padding: 10%;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  font-size: 20px;
+  transition: all 300ms ease;
+  color: black;
+}
+
+.menu-review:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.menu-description {
+  position: absolute;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70%;
+}
+
+@media (max-width: 960px) {
+  .side-menu {
+    left: -100%;
+    width: 100%;
+  }
 }
