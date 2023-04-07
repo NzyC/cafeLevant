@@ -114,13 +114,10 @@ function Menu() {
                 <div className="cover-wrapper">
                   <img className="cover" src={item.url} alt="" />
                 </div>
-              )}{" "}
+              )}
               <p className="cover-name" href="">
                 {item.name}
               </p>
-              <br />
-              <br />
-              <br />
             </Link>
           ))}
         </div>
