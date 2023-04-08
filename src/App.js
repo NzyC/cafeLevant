@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Menu from "./pages/Menu";
 import Drinks from "./pages/Drinks";
-import { useState } from "react";
+import Breakfast from "./pages/Breakfast"
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Menu />} />
         <Route path="/drinks" element={<Drinks />} />
+        <Route path="/breakfast" element={<Breakfast />} />
       </Routes>
       <Footer />
     </Router>

@@ -80,7 +80,7 @@
   width: 100%;
   opacity: 0;
   transition: all 0.5s ease;
-  display: none;
+  visibility: hidden;
 }
 
 .menu-links {
@@ -97,7 +97,7 @@
 .openRest {
   opacity: 0.8;
   z-index: 90;
-  display: block;
+  visibility: visible;
 }
 
 .clear-icon {

@@ -5,6 +5,7 @@
   border: 1px solid lightgray;
   margin: 24px;
   display: flex;
+  overflow: hidden;
 }
 
 .item-img {
