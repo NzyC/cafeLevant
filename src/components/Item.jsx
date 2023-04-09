@@ -1,8 +1,19 @@
 import "./Item.css";
 
 function Item({ name, description, price, currImg }) {
+
+  console.log(name);
+
+  function display() {
+    if ((name === "")) {
+      return "none";
+    } else {
+      return '1px solid lightgray'
+    }
+  }
+
   return (
-    <div className="item">
+    <div className="item" style={{ border: display()}}>
       <img className="item-img" src={currImg} alt="" />
       <div className="item-right">
         <h1>{name}</h1>
