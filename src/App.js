@@ -6,6 +6,8 @@ import Menu from "./pages/Menu";
 import Drinks from "./pages/Drinks";
 import Breakfast from "./pages/Breakfast"
 import Lunch from "./pages/Lunch";
+import Dessert from "./pages/Dessert";
+import InHouseKaak from "./pages/InHouseKaak";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/drinks" element={<Drinks />} />
         <Route path="/breakfast" element={<Breakfast />} />
         <Route path="/lunch" element={<Lunch />} />
+        <Route path="/dessert" element={<Dessert />} />
+        <Route path="/kaak" element={<InHouseKaak />} />
       </Routes>
       <Footer />
     </Router>

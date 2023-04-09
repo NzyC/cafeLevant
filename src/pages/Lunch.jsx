@@ -40,17 +40,74 @@ function Lunch() {
     },
     {
       id: 56,
+      name: "STEAK & CHIPS KID FRIENDLY",
+      description: null,
+      price: 19,
+    },
+    {
+      id: 57,
+      name: "BOLOGNESE KID FRIENDLY",
+      description: null,
+      price: 18,
+    },
+    {
+      id: 58,
+      name: "PANCAKES KID FRIENDLY",
+      description: null,
+      price: 18,
+    },
+    {
+      id: 59,
       name: "placeholder",
       description: null,
       price: 0,
     },
   ];
 
-  let count = 0;
-
-  function counter() {
-    count += 1;
-  }
+  const sides = [
+    {
+      id: 60,
+      name: "ARABIC CHICKEN CAESAR",
+      description:
+        "Grilled chicken, baby cos lettuce, beef rashers, hard-boiled egg, crispy pita, shanklish & ranch dressing",
+      price: 24,
+    },
+    {
+      id: 61,
+      name: "PEAS, KALE, LENTIL & HALLOUMI SALAD",
+      description:
+        "Mint, fried chickpeas, hazelnut dukkah",
+      price: 22,
+    },
+    {
+      id: 62,
+      name: "LEVANT'S TABBOULEH",
+      description:
+        "GF options available. Parsley, tomato, spring onion, mint, cucumber, Turkish burghul and our secret house dressing",
+      price: 15,
+    },
+    {
+      id: 63,
+      name: "HAND CUT CHIPS",
+      description:
+        "With rosemary salt, toum, harissa mayo",
+      price: 10,
+    },
+    {
+      id: 64,
+      name: "SWEET POTATO CHIPS",
+      description:
+        "With sumac, toum aioli",
+      price: 11,
+    },
+    {
+      id: 65,
+      name: "SEASONAL GREENS",
+      description:
+        "With almonds, lemon & olive oil",
+      price: 11,
+    },
+  ];
 
   return (
     <div className="drink-section">
@@ -83,6 +140,33 @@ function Lunch() {
             />
           )
         )}
+        <div className="extra-section">
+          <div className="extra-top">
+            <h1 className="extra-header">Extra Sides</h1>
+          </div>
+          <ul className="extra-item-list">
+            <li className="extra-item">Avocado</li>
+            <p className="extra-description">+4</p>
+            <li className="extra-item">Grilled chicken</li>
+            <p className="extra-description">+6</p>
+            <li className="extra-item">House cured salmon</li>
+            <p className="extra-description">+9</p>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <br />
+      <h2 className="section-header">Sides & Extras</h2>
+      <div className="section-category">
+        {sides.map((drink) => (
+          <Item
+            currImg={currImg}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
       </div>
       <div className="footer">
         <div className="break"></div>

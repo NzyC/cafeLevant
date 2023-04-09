@@ -26,7 +26,7 @@ function Menu() {
     },
     {
       id: 3,
-      name: "Lunch",
+      name: "Lunch & Sides",
       path: "lunch",
       url: lunchCover,
     },
