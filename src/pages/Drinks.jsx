@@ -2,7 +2,8 @@ import React from "react";
 import "./Drinks.css";
 import currImg from "../assets/Avocado Sourdough.jpg";
 import Item from "../components/Item";
-import HulmLogo from "../assets/hulmStudionsLogo.png"
+import HulmLogo from "../assets/hulmStudionsLogo.png";
+import { Link } from "react-router-dom";
 
 function Drinks() {
   const specialtyTeas = [
@@ -199,7 +200,7 @@ function Drinks() {
     {
       id: 21,
       name: "BELGIAN HOT CHOCOLATE",
-      description: "Lorem ipsum dolor, sit amet ",
+      description: null,
       price: {
         reg: 4,
         lrg: 4.5,
@@ -398,6 +399,19 @@ function Drinks() {
         ))}
       </div>
 
+      <h2 className="section-header">Levantine Coffee</h2>
+      <div className="section-category">
+        {levantineCoffee.map((drink) => (
+          <Item
+            currImg={currImg}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
+
       <h2 className="section-header">Cold Drinks</h2>
       <h3 className="section-options">Reg | Lrg</h3>
       <div className="section-category">
@@ -486,23 +500,23 @@ function Drinks() {
       </div>
 
       <div className="footer">
-          <div className="break"></div>
-          <figure className="hulm-logo-wrapper">
-            Powered by <img className="hulm-logo" src={HulmLogo} alt="" />
-          </figure>
-          <p className="hulm-logo-description">
-            Convergence of culture, creativity and branding.
-          </p>
-          <a
-            href="https://theright.fit/talent/hulm-studios"
-            className="learn-more"
-            target="_blank"
-          >
-            Learn More
-          </a>
-          <br />
-          <br />
-        </div>
+        <div className="break"></div>
+        <figure className="hulm-logo-wrapper">
+          Powered by <img className="hulm-logo" src={HulmLogo} alt="" />
+        </figure>
+        <p className="hulm-logo-description">
+          Convergence of culture, creativity and branding.
+        </p>
+        <a
+          href="https://theright.fit/talent/hulm-studios"
+          className="learn-more"
+          target="_blank"
+        >
+          Learn More
+        </a>
+        <br />
+        <br />
+      </div>
     </div>
   );
 }
