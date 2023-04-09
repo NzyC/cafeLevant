@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Item.css";
 
 function Item({ name, description, price, currImg }) {
@@ -6,16 +5,8 @@ function Item({ name, description, price, currImg }) {
     <div className="item">
       <img className="item-img" src={currImg} alt="" />
       <div className="item-right">
-        <h1>{name.length > 20 ? name.slice(0, 20) + "..." : name}</h1>
-        {description &&
-          // (description.split("").length >= 40 ? (
-          //   <p className="item-description">
-          //     {description.split("").slice(0, 40)}...
-          //   </p>
-          // ) : (
-            <p className="item-description">{description}</p>
-          // ))}
-        }
+        <h1>{name}</h1>
+        {description && <p className="item-description">{description}</p>}
         <div className="item-price-section">
           {price.reg || price.dineIn ? (
             <p className="item-price">{price.reg || price.dineIn}</p>

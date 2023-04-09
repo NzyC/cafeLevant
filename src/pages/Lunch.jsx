@@ -1,70 +1,52 @@
 import React from 'react'
-import './Breakfast.css'
+import './Lunch.css'
 import currImg from "../assets/Avocado Sourdough.jpg";
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png"
 
-function Breakfast() {
-  const breakfast = [
+function Lunch() {
+  const lunch = [
     {
-      id: 41,
-      name: "ROSE WATER CHIA PUDDING & HOUSE GRANOLA",
-      description: "Jersey milk, mango, strawberries, coconut served with labneh honey ice cream, GF option available",
-      price: 16,
+      id: 51,
+      name: "FLAME GRILLED STEAK",
+      description: "Coriander potatoes, seasonal vegetables, mushroom, sauce, choice of Scotch or Eye fillet",
+      price: 48,
     },
     {
-      id: 42,
-      name: "ASHTA ATAYEF PANCAKES",
-      description: "Levantine clotted cream, caramelised banana, fresh berries, maple syrup served with pistachio ice cream",
-      price: 22,
+      id: 52,
+      name: "CRISPY LFC CHICKEN BURGER",
+      description: "Slaw, pickles, harissa mayo with chips",
+      price: 19,
     },
     {
-      id: 43,
-      name: "ORGANIC ACAI BOWL",
-      description: "Strawberries, banana, granola, toasted coconut. Add Watermelon, Peanut butter, Nutella, Biscoff, Honey, GF Granola",
-      price: 14,
+      id: 53,
+      name: "GRILLED WILD PRAWNS",
+      description: "Muhammarra, herb salad & toasted pita bread",
+      price: 32,
     },
     {
-      id: 44,
-      name: "AVOCADO SOURDOUGH",
-      description: "63C organic egg, Persian feta, pickled fennel, radish, lemon, thyme, pomegranate",
-      price: 16,
+      id: 54,
+      name: "ZIAD'S WAGYU BOLOGNESE",
+      description: "Linguine, slow cooked wagyu bolognese, sumac, parmesan & parsley",
+      price: 25,
     },
     {
-      id: 45,
-      name: "ANCIENT GRAINS MJADARA BOWL",
-      description: "Pulled lamb, 63C organic egg, avocado, fermented pickles, mint, caramelised onion, toasted almonds, hollandaise",
-      price: 26,
+      id: 55,
+      name: "HEALTHY & LEAN PLATE",
+      description: "Brown rice, broccoli, carrot with harissa mayo",
+      price: 19,
     },
     {
-      id: 46,
-      name: "KAFTA & HALLOUMI ARAYES SAJ ROLLS",
-      description: "Charred capsicum, tarator, coriander topped with tomato & onion salsa",
-      price: 28,
+      id: 55,
+      name: "HEALTHY & LEAN PLATE2",
+      description: "Brown rice, broccoli, carrot with harissa mayo",
+      price: 19,
     },
     {
-      id: 47,
-      name: "PASTURED ORGANIC EGGS & TOAST",
-      description: "Eggs your way (fried/scrambled/ poached) served with sourdough",
-      price: 13,
-    },
-    {
-      id: 48,
-      name: "LEVANT OMELETTE",
-      description: "Organic eggs, slow cooked wild mushroom, mozzarella, spinach with beef rashers & sourdough",
-      price: 24,
-    },
-    {
-      id: 49,
-      name: "PAN FRIED BUTTER PASTRY WITH SUJUK & HOUSE-MADE BEANS",
-      description: "In house special butter pan fried pastry, tomato, sujuk, mint, peas, rocket & fetta",
-      price: 21,
-    },
-    {
-      id: 50,
-      name: "THE SULTAN'S BREAKFAST (2 PEOPLE)",
-      description: "Sujuk, scrambled/fried eggs, labneh, house made beans, grilled halloumi, tomato, cucumber, za'atar, our pickles & olives, sourdough, warm kaāk with a pot of tea",
-      price: 56,
+      id: 55,
+      name: "HEALTHY & LEAN PLATE3",
+      description: "Brown rice, broccoli, carrot with harissa mayo",
+      price: 19,
     },
   ];
 
@@ -76,11 +58,11 @@ function Breakfast() {
       <br />
       <br />
       <br />
-      <h2 className="section-header">Breakfast</h2>
-      <h3 className="section-options">All Day 7:00AM - 3:30PM</h3>
+      <h2 className="section-header">Lunch</h2>
+      <h3 className="section-options">11:00AM - 3:30PM</h3>
       <h3 className="section-options">Dine | Take-away</h3>
       <div className="section-category">
-        {breakfast.map((drink) => (
+        {lunch.map((drink) => (
           <Item
             currImg={currImg}
             key={drink.id}
@@ -147,4 +129,4 @@ function Breakfast() {
   );
 }
 
-export default Breakfast
+export default Lunch
