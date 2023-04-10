@@ -2,8 +2,6 @@ import "./Item.css";
 
 function Item({ name, description, price, currImg }) {
 
-  console.log(name);
-
   function display() {
     if ((name === "")) {
       return "none";

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Dessert.css";
 import currImg from "../assets/Avocado Sourdough.jpg";
 import Item from "../components/Item";
@@ -31,18 +31,22 @@ function InHouseKaak() {
       price: 15,
     },
     {
-      id: 72,
+      id: 73,
       name: "LEVANT",
       description: "Egg, tomato, bastourma, halloumi & fresh avocado",
       price: 15,
     },
     {
-      id: 73,
+      id: 74,
       name: "placeholder",
       description: "",
       price: 15,
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="drink-section">

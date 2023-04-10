@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Lunch.css";
 import currImg from "../assets/Avocado Sourdough.jpg";
 import Item from "../components/Item";
@@ -108,6 +108,10 @@ function Lunch() {
       price: 11,
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="drink-section">

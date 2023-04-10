@@ -11,6 +11,10 @@ import illustration from "../assets/Untitled design.png";
 import { Link } from "react-router-dom";
 
 function Menu() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const categories = [
     {
       id: 1,
