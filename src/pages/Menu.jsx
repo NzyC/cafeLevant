@@ -50,46 +50,45 @@ function Menu() {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    function allImagesLoaded() {
-      const images = document.getElementsByTagName("img");
-      for (let i = 0; i < images.length; i++) {
-        if (!images[i].complete) {
-          return false;
-        }
-      }
-      return true;
-    }
+  // useEffect(() => {
+  //   function allImagesLoaded() {
+  //     const images = document.getElementsByTagName("img");
+  //     for (let i = 0; i < images.length; i++) {
+  //       if (!images[i].complete) {
+  //         return false;
+  //       }
+  //     }
+  //     return true;
+  //   }
 
-    function handleImageLoad() {
-      if (allImagesLoaded()) {
-        setIsLoading(false);
-      }
-    }
+  //   function handleImageLoad() {
+  //     if (allImagesLoaded()) {
+  //       setIsLoading(false);
+  //     }
+  //   }
 
-    const images = document.getElementsByTagName("img");
-    for (let i = 0; i < images.length; i++) {
-      images[i].addEventListener("load", handleImageLoad);
-    }
+  //   const images = document.getElementsByTagName("img");
+  //   for (let i = 0; i < images.length; i++) {
+  //     images[i].addEventListener("load", handleImageLoad);
+  //   }
 
-    return () => {
-      for (let i = 0; i < images.length; i++) {
-        images[i].removeEventListener("load", handleImageLoad);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     for (let i = 0; i < images.length; i++) {
+  //       images[i].removeEventListener("load", handleImageLoad);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div className="flex">
       <div className="side-image-wrapper">
-        {isLoading ? (
+        {isLoading && (
           <div
             className="skeleton-box"
             style={{ width: "100%", height: "100%" }}
           ></div>
-        ) : (
-          <img className="side-image" src={sideImage} alt="" />
         )}
+        <img className="side-image" src={sideImage} alt="" onLoad={() => setIsLoading(false)} />
       </div>
       <div className="menu">
         {isLoading ? (

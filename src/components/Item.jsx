@@ -14,7 +14,7 @@ function Item({ name, description, price, currImg }) {
 
   return (
     <div className="item" style={{ border: display() }}>
-      {isLoading && (
+      {(isLoading && name !== "") && (
         <div
           className="skeleton-box"
           style={{ width: "40%", height: "100%" }}
