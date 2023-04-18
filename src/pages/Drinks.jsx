@@ -1,6 +1,17 @@
 import React, { useEffect } from "react";
 import "./Drinks.css";
-import currImg from "../assets/Avocado Sourdough.jpg";
+import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
+import teas from "../assets/drinks/tea.jpg"
+import coffee from "../assets/drinks/coffee.jpg"
+import coldbrew from "../assets/drinks/coldbrew.jpg"
+import caramelLotus from "../assets/drinks/Caramel Lotus.jpg"
+import coffeeFrappe from "../assets/drinks/Coffee Frappe.jpg"
+import cookiesAndCream from "../assets/drinks/Cookies and Cream.jpg"
+import milkshakesImg from "../assets/drinks/milkshakes.jpg"
+import citrusBangandGreenMachine from "../assets/drinks/citrusbangandgreenmachine.jpg"
+import tempCitrusBang from "../assets/drinks/temp citrus bang.jpg"
+import berrySmoothie from "../assets/drinks/berry-smoothie.jpg"
+import WAM from "../assets/drinks/WAM juice.jpg"
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png";
 import { Link } from "react-router-dom";
@@ -305,6 +316,7 @@ function Drinks() {
       name: "PECAN & DATE",
       description: "Date, maple pecan, milk, molasses, whipped cream",
       price: 10,
+      img: cookiesAndCream,
     },
     {
       id: 35,
@@ -312,12 +324,14 @@ function Drinks() {
       description:
         "Biscoff, milk, vanilla ice cream, lotus cookies, whipped cream",
       price: 10,
+      img: caramelLotus,
     },
     {
       id: 36,
       name: "COFFEE",
       description: "Espresso, milk, ice cream, whipped cream",
       price: 10,
+      img: coffeeFrappe,
     },
     {
       id: 37,
@@ -325,6 +339,7 @@ function Drinks() {
       description:
         "Oreo, vanilla ice cream, cacao, milk, cookies, whipped cream",
       price: 10,
+      img: cookiesAndCream,
     },
   ];
 
@@ -334,18 +349,21 @@ function Drinks() {
       name: "CITRUS BANG",
       description: "Orange, lemon, lime, ginger",
       price: 7.5,
+      img: tempCitrusBang,
     },
     {
       id: 39,
       name: "WAM",
       description: "Watermelon, apple, mint",
       price: 7.5,
+      img: WAM,
     },
     {
       id: 40,
       name: "GREEN MACHINE",
       description: "Celery, green apple, spinach cucumber, lemon",
       price: 7.5,
+      img: citrusBangandGreenMachine,
     },
   ];
 
@@ -366,7 +384,7 @@ function Drinks() {
       <div className="section-category">
         {specialtyTeas.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={teas}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -380,7 +398,7 @@ function Drinks() {
       <div className="section-category">
         {hotBrewed.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={teas}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -394,7 +412,7 @@ function Drinks() {
       <div className="section-category">
         {hot.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={coffee}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -407,7 +425,7 @@ function Drinks() {
       <div className="section-category">
         {levantineCoffee.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={coffee}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -421,7 +439,7 @@ function Drinks() {
       <div className="section-category">
         {cold.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={coldbrew}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -434,7 +452,7 @@ function Drinks() {
       <div className="section-category">
         {milkshakes.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={milkshakesImg}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -461,7 +479,7 @@ function Drinks() {
       <div className="section-category">
         {smoothies.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={berrySmoothie}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -474,7 +492,7 @@ function Drinks() {
       <div className="section-category">
         {frappe.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={drink.img}
             key={drink.id}
             name={drink.name}
             price={drink.price}
@@ -487,7 +505,7 @@ function Drinks() {
       <div className="section-category">
         {juices.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={drink.img}
             key={drink.id}
             name={drink.name}
             price={drink.price}

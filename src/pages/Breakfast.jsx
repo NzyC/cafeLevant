@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Breakfast.css'
-import currImg from "../assets/Avocado Sourdough.jpg";
+import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png"
 
