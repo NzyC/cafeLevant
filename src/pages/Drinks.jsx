@@ -3,6 +3,7 @@ import "./Drinks.css";
 import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
 import teas from "../assets/drinks/tea.jpg"
 import coffee from "../assets/drinks/coffee.jpg"
+import levantineCoffeeImg from "../assets/drinks/levantineCoffee.jpg"
 import coldbrew from "../assets/drinks/coldbrew.jpg"
 import caramelLotus from "../assets/drinks/Caramel Lotus.jpg"
 import coffeeFrappe from "../assets/drinks/Coffee Frappe.jpg"
@@ -425,7 +426,7 @@ function Drinks() {
       <div className="section-category">
         {levantineCoffee.map((drink) => (
           <Item
-            currImg={coffee}
+            currImg={levantineCoffeeImg}
             key={drink.id}
             name={drink.name}
             price={drink.price}
