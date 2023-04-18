@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import "./Dessert.css";
 import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
+import stickyDate from "../assets/dessert/sticky-date.jpg"
+import arabicTirimisu from "../assets/dessert/arabic titimisu.jpg"
+import gelato from "../assets/dessert/gelato.jpg"
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png";
 
@@ -11,18 +14,21 @@ function Dessert() {
       name: "ARABIC TIRAMISU",
       description: "Mascarpone, coco nibs, brewed cardamom coffee",
       price: 18,
+      img: arabicTirimisu,
     },
     {
       id: 67,
       name: "LEVANT STICKY DATE SUNDAY",
       description: "Vanilla gelato, caramelised pecan, date, date syrup cake",
       price: 15,
+      img: stickyDate,
     },
     {
       id: 68,
       name: "GELATO",
       description: "Vanilla, pistachio, rose water, chocolate cinnamon, mango",
       price: 5,
+      img: gelato,
     },
   ];
 
@@ -45,7 +51,7 @@ function Dessert() {
       <div className="section-category">
         {dessert.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={drink.img}
             key={drink.id}
             name={drink.name}
             price={drink.price}
