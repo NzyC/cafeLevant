@@ -1,24 +1,32 @@
 import React, { useEffect } from "react";
 import "./Drinks.css";
-import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
-import teas from "../assets/drinks/tea.jpg"
-import coffee from "../assets/drinks/coffee.jpg"
-import levantineCoffeeImg from "../assets/drinks/levantineCoffee.jpg"
-import coldbrew from "../assets/drinks/coldbrew.jpg"
-import caramelLotus from "../assets/drinks/Caramel Lotus.jpg"
-import coffeeFrappe from "../assets/drinks/Coffee Frappe.jpg"
-import cookiesAndCream from "../assets/drinks/Cookies and Cream.jpg"
-import milkshakesImg from "../assets/drinks/milkshakes.jpg"
-import citrusBangandGreenMachine from "../assets/drinks/citrusbangandgreenmachine.jpg"
-import tempCitrusBang from "../assets/drinks/temp citrus bang.jpg"
-import berrySmoothie from "../assets/drinks/berry-smoothie.jpg"
-import WAM from "../assets/drinks/WAM juice.jpg"
+import teas from "../assets/drinks/tea.jpg";
+import coffee from "../assets/drinks/coffee.jpg";
+import levantineCoffeeImg from "../assets/drinks/levantineCoffee.jpg";
+import coldbrew from "../assets/drinks/coldbrew.jpg";
+import caramelLotus from "../assets/drinks/Caramel Lotus.jpg";
+import coffeeFrappe from "../assets/drinks/Coffee Frappe.jpg";
+import cookiesAndCream from "../assets/drinks/Cookies and Cream.jpg";
+import milkshakesImg from "../assets/drinks/milkshakes.jpg";
+import citrusBangandGreenMachine from "../assets/drinks/citrusbangandgreenmachine.jpg";
+import tempCitrusBang from "../assets/drinks/temp citrus bang.jpg";
+import berrySmoothie from "../assets/drinks/berry-smoothie.jpg";
+import WAM from "../assets/drinks/WAM juice.jpg";
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png";
-import { Link } from "react-router-dom";
+import tumericShot from "../assets/drinks/tumeric-shot.jpg";
 
 function Drinks() {
   const specialtyTeas = [
+    {
+      id: 74,
+      name: "AUSSIE CUPPA",
+      description: "simply black tea.",
+      price: {
+        takeaway: 4,
+        dineIn: 9,
+      },
+    },
     {
       id: 1,
       name: "JORDANIAN SAGE",
@@ -70,7 +78,7 @@ function Drinks() {
       id: 6,
       name: "PERSIAN CARDAMOM",
       description:
-        "Shai bil Kirfi. Ceylon black tea with cinnamon and a hint of rose",
+        "Chayi ba Hel. Darjeeling, Earl grey and Ceylon black teas, spiced with aromatic cardamom and rose",
       price: {
         takeaway: 4,
         dineIn: 9,
@@ -116,31 +124,25 @@ function Drinks() {
     {
       id: 10,
       name: "ESPRESSO",
-      description: null,
-      price: {
-        reg: 3.5,
-        lrg: 4,
-      },
+      description: "house blend, single origin +0.5",
+      price: 4.5,
     },
     {
       id: 11,
       name: "MACCHIATO",
-      description: null,
-      price: {
-        reg: 3.5,
-        lrg: 4,
-      },
+      description: "house blend, single origin +0.5",
+      price: 4.5,
     },
     {
       id: 12,
       name: "PICCOLO",
-      description: null,
-      price: 4,
+      description: "house blend, single origin +0.5",
+      price: 4.5,
     },
     {
       id: 13,
       name: "CAPPUCINO",
-      description: null,
+      description: "house blend, single origin +0.5",
       price: {
         reg: 4,
         lrg: 4.5,
@@ -149,7 +151,7 @@ function Drinks() {
     {
       id: 14,
       name: "LATTE",
-      description: null,
+      description: "house blend, single origin +0.5",
       price: {
         reg: 4,
         lrg: 4.5,
@@ -158,7 +160,7 @@ function Drinks() {
     {
       id: 15,
       name: "FLAT WHITE",
-      description: null,
+      description: "house blend, single origin +0.5",
       price: {
         reg: 4,
         lrg: 4.5,
@@ -167,7 +169,7 @@ function Drinks() {
     {
       id: 16,
       name: "LONG BLACK",
-      description: null,
+      description: "house blend, single origin +0.5",
       price: {
         reg: 4,
         lrg: 4.5,
@@ -175,47 +177,65 @@ function Drinks() {
     },
     {
       id: 17,
-      name: "CHAI",
+      name: "BELGIAN MOCHA",
       description: null,
       price: {
-        reg: 4,
-        lrg: 4.5,
+        reg: 5.5,
+        lrg: 6,
       },
     },
     {
       id: 18,
-      name: "DIRTY CHAI",
+      name: "BELGIAN HOT CHOCOLATE",
       description: null,
       price: {
-        reg: 4,
-        lrg: 4.5,
+        reg: 5.5,
+        lrg: 6,
       },
     },
     {
       id: 19,
-      name: "SPICY CHAI",
+      name: "BELGIAN WHITE CHOCOLATE",
       description: null,
       price: {
-        reg: 4,
-        lrg: 4.5,
+        reg: 5.5,
+        lrg: 6,
       },
     },
     {
       id: 20,
-      name: "BELGIAN MOCHA",
+      name: "CHAI ADDICT CHAI LATTE",
       description: null,
       price: {
-        reg: 4,
-        lrg: 4.5,
+        reg: 5.5,
+        lrg: 6,
       },
     },
     {
       id: 21,
-      name: "BELGIAN HOT CHOCOLATE",
+      name: "MATCHA LATTE",
       description: null,
       price: {
-        reg: 4,
-        lrg: 4.5,
+        reg: 5.5,
+        lrg: 6,
+      },
+    },
+    {
+      id: 77,
+      name: "TURMERIC LATTE",
+      description: null,
+      price: {
+        reg: 5.5,
+        lrg: 6,
+      },
+    },
+    {
+      id: 78,
+      name: "DIRTY CHAI",
+      description: null,
+      price: {
+        reg: 5.5,
+        lrg: 6,
       },
     },
   ];
@@ -235,9 +255,9 @@ function Drinks() {
     },
     {
       id: 24,
-      name: "TURKISH WITH MASTICA",
+      name: "LEVANT WITH MASTICA",
       description: "Made by the Brik on hot sand",
-      price: 8,
+      price: 7,
     },
   ];
 
@@ -246,19 +266,31 @@ function Drinks() {
       id: 25,
       name: "ICED LONG BLACK",
       description: null,
-      price: 5,
+      price: 7,
     },
     {
       id: 26,
       name: "ICED LATTE",
       description: null,
-      price: 6,
+      price: 7,
     },
     {
       id: 27,
       name: "ICED CHOCOLATE",
       description: null,
-      price: 6,
+      price: 7,
+    },
+    {
+      id: 79,
+      name: "ICED CHAI",
+      description: null,
+      price: 7,
+    },
+    {
+      id: 80,
+      name: "ICED MATCHA",
+      description: null,
+      price: 7,
     },
   ];
 
@@ -267,78 +299,92 @@ function Drinks() {
       id: 27,
       name: "RASPBERRY",
       description: null,
-      price: 7.5,
+      price: {
+        reg: 8,
+        lrg: 6,
+      },
     },
     {
       id: 28,
       name: "CHOCOLATE",
       description: null,
-      price: 7.5,
+      price: {
+        reg: 8,
+        lrg: 6,
+      },
     },
     {
       id: 29,
       name: "CARAMEL",
       description: null,
-      price: 7.5,
+      price: {
+        reg: 8,
+        lrg: 6,
+      },
     },
   ];
 
   const smoothies = [
     {
       id: 30,
-      name: "ORANGE & ALMOND",
-      description: "Orange, banana, almond milk, almond butter, vanilla",
-      price: 9,
+      name: "BANANA",
+      description: "milk, banana, honey",
+      price: 10,
     },
     {
       id: 31,
-      name: "COCONUT",
-      description:
-        "Coconut water, coconut milk, coconut sorbet, yoghurt, pineapple",
-      price: 9,
+      name: "MANGO",
+      description: "milk, mango, honey",
+      price: 10,
     },
     {
       id: 32,
       name: "BERRY",
-      description: "Mixed berries, milk, strawberry sorbet, honey, chia seeds",
-      price: 9,
+      description: "milk, mixed berries, banana, yoghurt, honey",
+      price: 10,
     },
     {
       id: 33,
-      name: "MOUSSE SMOOTHIE",
-      description: "Avocado, cocoa, milk, honey, chocolate",
-      price: 9,
+      name: "AVACADO",
+      description:
+        "milk, avocado, greens, raw cacoa, pics peanut butter, honey",
+      price: 10,
+    },
+    {
+      id: 81,
+      name: "ACAI",
+      description: "organic acai, guarana syrup, banana, cane sugar",
+      price: 10,
     },
   ];
 
   const frappe = [
     {
       id: 34,
-      name: "PECAN & DATE",
-      description: "Date, maple pecan, milk, molasses, whipped cream",
+      name: "LEVANT DATE",
+      description:
+        "Milk, dates, date molasses, icecream, pecans, whipped cream",
       price: 10,
       img: cookiesAndCream,
     },
     {
       id: 35,
-      name: "LOTUS",
-      description:
-        "Biscoff, milk, vanilla ice cream, lotus cookies, whipped cream",
+      name: "CARAMEL LOTUS",
+      description: "Milk, bisco, ice cream, caramel, banana, whipped cream",
       price: 10,
       img: caramelLotus,
     },
     {
       id: 36,
       name: "COFFEE",
-      description: "Espresso, milk, ice cream, whipped cream",
+      description: "Milk, espresso, ice cream, whipped cream",
       price: 10,
       img: coffeeFrappe,
     },
     {
       id: 37,
       name: "COOKIES & CREAM",
-      description:
-        "Oreo, vanilla ice cream, cacao, milk, cookies, whipped cream",
+      description: "Milk, Oreo cookies, vanilla ice cream, banana, cream",
       price: 10,
       img: cookiesAndCream,
     },
@@ -362,11 +408,122 @@ function Drinks() {
     {
       id: 40,
       name: "GREEN MACHINE",
-      description: "Celery, green apple, spinach cucumber, lemon",
+      description: "Celery, green apple, spinach, cucumber, lemon",
       price: 7.5,
       img: citrusBangandGreenMachine,
     },
   ];
+
+  const shots = [
+    {
+      id: 82,
+      name: "TURMERIC SHOT",
+      description:
+        "tumeric, ginger, raw apple cider vinegar, lemon, black pepper",
+      price: 8,
+      img: tumericShot,
+    },
+    {
+      id: 83,
+      name: "GINGER SHOT",
+      description: "ginger, lemon",
+      price: 8,
+      img: tumericShot,
+    },
+  ];
+
+  const postDecaf = [
+    {
+      id: 84,
+      name: "COLD DRIP",
+      description: "takeaway +.1",
+      price: 7,
+      img: null,
+    },
+    {
+      id: 85,
+      name: "BATCH BREW",
+      description: "upgrade to refillable +3.5",
+      price: 6.5,
+      img: null,
+    },
+  ];
+
+  const levantCocktails = [
+    {
+      id: 86,
+      name: "LEMON MINT CRUSH",
+      description: "fresh lemon, mint, raw sugar syrup",
+      price: 10,
+      img: tempCitrusBang,
+    },
+    {
+      id: 87,
+      name: "RASPBERRY POMEGRANATE CRUSH",
+      description: "pomegranate juice, raspberry syrup, lime",
+      price: 10,
+      img: tempCitrusBang,
+    },
+    {
+      id: 88,
+      name: "DIRTY V",
+      description: "jalapeno salt rimmed, lime, V",
+      price: 10,
+      img: tempCitrusBang,
+    },
+  ];
+
+  const softDrinks = [
+    {
+      id: 89,
+      name: "FIJI WATER BOTTLE",
+      description: null,
+      price: 4.5,
+      img: tempCitrusBang,
+    },
+    {
+      id: 90,
+      name: "SAN PELEGRINO SPARKLING",
+      description: null,
+      price: 4.5,
+      img: tempCitrusBang,
+    },
+    {
+      id: 91,
+      name: "COKE",
+      description: null,
+      price: 4.5,
+      img: tempCitrusBang,
+    },
+    {
+      id: 90,
+      name: "COKE NO SUGAR",
+      description: null,
+      price: 4.5,
+      img: tempCitrusBang,
+    },
+    {
+      id: 90,
+      name: "V",
+      description: null,
+      price: 4.5,
+      img: tempCitrusBang,
+    },
+    {
+      id: 90,
+      name: "V NO SUGAR",
+      description: null,
+      price: 4.5,
+      img: tempCitrusBang,
+    },
+    {
+      id: 90,
+      name: "PUREZZA SPARKLING 750ML (DINE IN ONLY)",
+      description: null,
+      price: 5,
+      img: tempCitrusBang,
+    },
+  ]
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -389,7 +546,7 @@ function Drinks() {
             key={drink.id}
             name={drink.name}
             price={drink.price}
-            description={drink.description}
+            description={drink.description.replace(/\n/g, <br />)}
           />
         ))}
       </div>
@@ -422,6 +579,27 @@ function Drinks() {
         ))}
       </div>
 
+      <div className="extra-top">
+        <h1 className="extra-header">Decaf</h1>
+        <p className="extra-description">+0.5</p>
+      </div>
+
+      <div className="section-category">
+        {postDecaf.map((drink) => (
+          <Item
+            currImg={coffee}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
+
+      <div className="extra-top">
+        <p className="extra-description">add cold sweetened froth +0.5</p>
+      </div>
+
       <h2 className="section-header">Levantine Coffee</h2>
       <div className="section-category">
         {levantineCoffee.map((drink) => (
@@ -450,6 +628,7 @@ function Drinks() {
       </div>
 
       <h2 className="section-header">Milkshakes</h2>
+      <h3 className="section-options">Reg | Kids</h3>
       <div className="section-category">
         {milkshakes.map((drink) => (
           <Item
@@ -476,6 +655,19 @@ function Drinks() {
         </ul>
       </div>
 
+      <h2 className="section-header">Shots</h2>
+      <div className="section-category">
+        {shots.map((drink) => (
+          <Item
+            currImg={drink.img}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
+
       <h2 className="section-header">Smoothies</h2>
       <div className="section-category">
         {smoothies.map((drink) => (
@@ -487,6 +679,17 @@ function Drinks() {
             description={drink.description}
           />
         ))}
+      </div>
+
+      <div className="extra-section">
+        <div className="extra-top">
+          <h1 className="extra-header">Extras</h1>
+          <p className="extra-description">+2</p>
+        </div>
+        <ul className="extra-item-list">
+          <li className="extra-item">Oats & Chia</li>
+          <li className="extra-item">Protein Powder</li>
+        </ul>
       </div>
 
       <h2 className="section-header">Frappe's</h2>
@@ -515,11 +718,30 @@ function Drinks() {
         ))}
       </div>
 
-      <div className="extra-section">
-        <ul className="extra-item-list">
-          <li className="extra-item">Extras +0.5</li>
-          <li className="extra-item">Protein +1</li>
-        </ul>
+      <h2 className="section-header">Levant Cocktails</h2>
+      <div className="section-category">
+        {levantCocktails.map((drink) => (
+          <Item
+            currImg={drink.img}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
+
+      <h2 className="section-header">Soft Drinks</h2>
+      <div className="section-category">
+        {softDrinks.map((drink) => (
+          <Item
+            currImg={drink.img}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
       </div>
 
       <div className="footer">

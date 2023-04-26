@@ -50,35 +50,6 @@ function Menu() {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   function allImagesLoaded() {
-  //     const images = document.getElementsByTagName("img");
-  //     for (let i = 0; i < images.length; i++) {
-  //       if (!images[i].complete) {
-  //         return false;
-  //       }
-  //     }
-  //     return true;
-  //   }
-
-  //   function handleImageLoad() {
-  //     if (allImagesLoaded()) {
-  //       setIsLoading(false);
-  //     }
-  //   }
-
-  //   const images = document.getElementsByTagName("img");
-  //   for (let i = 0; i < images.length; i++) {
-  //     images[i].addEventListener("load", handleImageLoad);
-  //   }
-
-  //   return () => {
-  //     for (let i = 0; i < images.length; i++) {
-  //       images[i].removeEventListener("load", handleImageLoad);
-  //     }
-  //   };
-  // }, []);
-
   return (
     <div className="flex">
       <div className="side-image-wrapper">
@@ -105,9 +76,9 @@ function Menu() {
         )}
         <div className="break"></div>
         <div className="covers">
-          <h1 className="menu-header">View Menu</h1>
+          <h1 className="menu-header">MENU</h1>
           {categories.map((item, index) => (
-            <Link to={`/${item.path}`} key={index}>
+            <Link className="cover-container" to={`/${item.path}`} key={index}>
               {isLoading ? (
                 <div
                   className="skeleton-box"

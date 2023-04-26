@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import './Breakfast.css'
-import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
+import avocadoSourdough from "../assets/breakfast/Avocado Sourdough.jpg";
+import acaiBowl from "../assets/breakfast/Acai bowl-min.jpg"
+import atayefPancakes from "../assets/breakfast/Ashta Atayef Pancakes-min.jpg"
+import levanteOmelete from "../assets/breakfast/Levant Omellete-min.jpg"
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png"
 
@@ -17,18 +20,21 @@ function Breakfast() {
       name: "ASHTA ATAYEF PANCAKES",
       description: "Levantine clotted cream, caramelised banana, fresh berries, maple syrup served with pistachio ice cream",
       price: 22,
+      img: atayefPancakes,
     },
     {
       id: 43,
       name: "ORGANIC ACAI BOWL",
       description: "Strawberries, banana, granola, toasted coconut. Add Watermelon, Peanut butter, Nutella, Biscoff, Honey, GF Granola",
       price: 14,
+      img: acaiBowl,
     },
     {
       id: 44,
       name: "AVOCADO SOURDOUGH",
       description: "63C organic egg, Persian feta, pickled fennel, radish, lemon, thyme, pomegranate",
       price: 16,
+      img: avocadoSourdough,
     },
     {
       id: 45,
@@ -53,6 +59,7 @@ function Breakfast() {
       name: "LEVANT OMELETTE",
       description: "Organic eggs, slow cooked wild mushroom, mozzarella, spinach with beef rashers & sourdough",
       price: 24,
+      img: levanteOmelete,
     },
     {
       id: 49,
@@ -86,7 +93,7 @@ function Breakfast() {
       <div className="section-category">
         {breakfast.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={drink.img}
             key={drink.id}
             name={drink.name}
             price={drink.price}

@@ -36,12 +36,6 @@ function InHouseKaak() {
       description: "Egg, tomato, bastourma, halloumi & fresh avocado",
       price: 15,
     },
-    {
-      id: 74,
-      name: "placeholder",
-      description: "",
-      price: 15,
-    },
   ];
 
   useEffect(() => {

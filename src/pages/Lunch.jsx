@@ -56,12 +56,6 @@ function Lunch() {
       description: null,
       price: 18,
     },
-    {
-      id: 59,
-      name: "placeholder",
-      description: null,
-      price: 0,
-    },
   ];
 
   const sides = [
