@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import "./Dessert.css";
 import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
+import lebKaak from "../assets/in-house-kaak/lebanese-kaak.jpg"
+import levantKaak from "../assets/in-house-kaak/levant-kaak.jpg"
+import aussieKaak from "../assets/in-house-kaak/aussie-kaak.jpg"
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png";
 
@@ -11,30 +14,28 @@ function InHouseKaak() {
       name: "LEBANESE",
       description: "Shanklish, muhammara, tomato, onion, cucumber, tarragon, olive oil",
       price: 15,
+      img: lebKaak
     },
     {
       id: 70,
       name: "AUSSIE",
-      description: "Egg, beef rashers, cheese & smokey BBQ sauce",
-      price: 13,
+      description: "Mulloon Creek organic egg, beef rashers, cheese & smokey BBQ sauce",
+      price: 16,
+      img: aussieKaak
     },
     {
       id: 71,
       name: "TURKISH",
-      description: "Sujuk, capsicum, rocket, tomato and harissa mayo. Add Egg +3",
-      price: 14,
-    },
-    {
-      id: 72,
-      name: "SYRIAN",
-      description: "Toshka Syrian spiced beef, three cheeses, pickles served with ayran",
-      price: 15,
+      description: "Sujuk, capsicum, rocket, tomato and harissa. Add Egg +4",
+      price: 16,
+      img: lebKaak
     },
     {
       id: 73,
       name: "LEVANT",
-      description: "Egg, tomato, bastourma, halloumi & fresh avocado",
-      price: 15,
+      description: "Mulloon Creek organic egg, tomato, bastourma, halloumi & fresh avocado",
+      price: 16,
+      img: levantKaak
     },
   ];
 
@@ -55,7 +56,7 @@ function InHouseKaak() {
       {kaak.map((lunch) =>
           lunch.name !== "placeholder" ? (
             <Item
-              currImg={currImg}
+              currImg={lunch.img}
               key={lunch.id}
               name={lunch.name}
               price={lunch.price}

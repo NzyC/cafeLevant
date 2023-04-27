@@ -90,7 +90,7 @@ function Menu() {
                 </div>
               )}
               <p className="cover-name" href="">
-                {item.name}
+                {item.name.toUpperCase()}
               </p>
             </Link>
           ))}

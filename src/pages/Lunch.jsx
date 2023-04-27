@@ -1,107 +1,131 @@
 import React, { useEffect } from "react";
 import "./Lunch.css";
 import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
+import roastedCauliflower from "../assets/lunch/roasted-cauliflower.jpg"
+import quinoua from "../assets/lunch/grilled-quinoua.jpg"
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png";
+import healthyPlate from "../assets/lunch/healthy-plate-min.jpg"
+import beefBurger from "../assets/lunch/beef-burger-min.jpg"
+import levantBurger from "../assets/lunch/levant-double-chicken-min.jpg"
+import eggsToast from "../assets/breakfast/eggs-on-toast.jpg"
+import cheeseBurger from "../assets/lunch/cheeseburger-meal.jpg"
+import pancakes from "../assets/lunch/pancakes.jpg"
+import seasonalGreens from "../assets/lunch/seasonal-greens.jpg"
+import mushroomSauce from "../assets/lunch/mushroom-sauce.jpg"
+import fries from "../assets/lunch/fries.jpg"
 
 function Lunch() {
   const lunch = [
     {
       id: 51,
-      name: "FLAME GRILLED STEAK",
+      name: "TRADITIONAL BEEF BURGER",
       description:
-        "Coriander potatoes, seasonal vegetables, mushroom, sauce, choice of Scotch or Eye fillet",
-      price: 48,
+        "Premium beef pattie, crispy beef rashers, american cheese, lettuce, tomato, onion, beetroot, pickles, levant burger sauce, chips",
+      price: 23,
+      img: beefBurger
     },
     {
       id: 52,
-      name: "CRISPY LFC CHICKEN BURGER",
-      description: "Slaw, pickles, harissa mayo with chips",
-      price: 19,
+      name: "LEVANT DOUBLE CHICKEN BURGER",
+      description: "Grilled marinated chicken breast fillets, slaw, cheese, mayo, chips",
+      price: 23,
+      img: levantBurger
     },
     {
       id: 53,
-      name: "GRILLED WILD PRAWNS",
-      description: "Muhammarra, herb salad & toasted pita bread",
-      price: 32,
+      name: "CLASSIC CHICKEN FUNGHI",
+      description: "house crumbed chicken breast, hand cut chips, chef's mushroom sauce",
+      price: 26,
+      img: levantBurger
     },
     {
       id: 54,
-      name: "ZIAD'S WAGYU BOLOGNESE",
+      name: "HEALTHY LEAN PLATE",
       description:
-        "Linguine, slow cooked wagyu bolognese, sumac, parmesan & parsley",
-      price: 25,
-    },
-    {
-      id: 55,
-      name: "HEALTHY & LEAN PLATE",
-      description: "Brown rice, broccoli, carrot with harissa mayo",
-      price: 19,
+        "brown rice, seasonal vege, dill chilli mayo, ADD grilled chicken +6 grilled salmon +9",
+      price: 21,
+      img: healthyPlate
     },
     {
       id: 56,
-      name: "STEAK & CHIPS KID FRIENDLY",
-      description: null,
-      price: 19,
+      name: "GRILLED CHICKEN AND QUINOA",
+      description: "marinated chicken breast, lentils, avocado, cucumber, parsley, peas, lemon, EVOO",
+      price: 27,
+      img: quinoua
     },
     {
       id: 57,
-      name: "BOLOGNESE KID FRIENDLY",
-      description: null,
-      price: 18,
-    },
-    {
-      id: 58,
-      name: "PANCAKES KID FRIENDLY",
-      description: null,
-      price: 18,
+      name: "ROASTED CAULIFLOWER",
+      description: "carrot, kale, barley, dukkah, pomegranate tarator ADD organic egg +4 grilled chicken +6 grilled salmon +9",
+      price: 22,
+      img: roastedCauliflower
     },
   ];
 
   const sides = [
     {
       id: 60,
-      name: "ARABIC CHICKEN CAESAR",
+      name: "HAND CUT STYLE CHIPS",
       description:
-        "Grilled chicken, baby cos lettuce, beef rashers, hard-boiled egg, crispy pita, shanklish & ranch dressing",
-      price: 24,
+        "rosemary salt, toum, harissa mayo",
+      price: 10,
+      img: fries
     },
     {
       id: 61,
-      name: "PEAS, KALE, LENTIL & HALLOUMI SALAD",
-      description:
-        "Mint, fried chickpeas, hazelnut dukkah",
-      price: 22,
+      name: "SWEET POTATO CHIPS",
+      description: "sumac, toum aioli",
+      price: 11,
+      img: fries
     },
     {
       id: 62,
-      name: "LEVANT'S TABBOULEH",
+      name: "SEASONAL GREENS",
       description:
-        "GF options available. Parsley, tomato, spring onion, mint, cucumber, Turkish burghul and our secret house dressing",
-      price: 15,
+        "almonds, lemon & olive oil",
+      price: 11,
+      img: seasonalGreens
     },
     {
       id: 63,
-      name: "HAND CUT CHIPS",
-      description:
-        "With rosemary salt, toum, harissa mayo",
-      price: 10,
-    },
-    {
-      id: 64,
-      name: "SWEET POTATO CHIPS",
-      description:
-        "With sumac, toum aioli",
-      price: 11,
-    },
-    {
-      id: 65,
-      name: "SEASONAL GREENS",
-      description:
-        "With almonds, lemon & olive oil",
-      price: 11,
-    },
+      name: "MUSHROOM SAUCE",
+      description: null,
+      price: 4,
+      img: mushroomSauce
+    }
   ];
+
+  const kids = [
+    {
+      id: 88,
+      name: "EGG ON TOAST",
+      description: "Mulloon Creek egg made your way with sourdough",
+      price: 12,
+      img: eggsToast
+    },
+    {
+      id: 89,
+      name: "PANCAKES",
+      description: "nutella, berries, banana, ice cream, maple syrup",
+      price: 12,
+      img: pancakes
+    },
+    {
+      id: 90,
+      name: "CHEESEBURGER MEAL",
+      description: "soft milk bun, premium beef pattie, american cheese, pickles, tomato sauce, onion, ,mustard, handcut chips",
+      price: 12,
+      img: cheeseBurger
+    },
+    {
+      id: 91,
+      name: "CRUMBED CHICKEN STRIPS, CHIPS",
+      description: null,
+      price: 12,
+      img: cheeseBurger
+    },
+  ]
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -116,49 +140,37 @@ function Lunch() {
       <br />
       <br />
       <h2 className="section-header">Lunch</h2>
-      <h3 className="section-options">11:00AM - 3:30PM</h3>
+      {/* <h3 className="section-options">11:00AM - 3:30PM</h3> */}
       <h3 className="section-options">Dine | Take-away</h3>
       <div className="section-category">
-        {lunch.map((lunch) =>
-          lunch.name !== "placeholder" ? (
-            <Item
-              currImg={currImg}
-              key={lunch.id}
-              name={lunch.name}
-              price={lunch.price}
-              description={lunch.description}
-            />
-          ) : (
-            <Item
-              currImg={null}
-              key={lunch.id}
-              name={""}
-              price={""}
-              description={lunch.description}
-            />
-          )
-        )}
-        <div className="extra-section">
-          <div className="extra-top">
-            <h1 className="extra-header">Extra Sides</h1>
-          </div>
-          <ul className="extra-item-list">
-            <li className="extra-item">Avocado</li>
-            <p className="extra-description">+4</p>
-            <li className="extra-item">Grilled chicken</li>
-            <p className="extra-description">+6</p>
-            <li className="extra-item">House cured salmon</li>
-            <p className="extra-description">+9</p>
-          </ul>
-        </div>
+        {lunch.map((drink) => (
+          <Item
+            currImg={drink.img}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
       </div>
-      <br />
-      <br />
+      <h2 className="section-header">Kids</h2>
+      <h3 className="section-options">Dine | Take-away</h3>
+      <div className="section-category">
+        {kids.map((drink) => (
+          <Item
+            currImg={drink.img}
+            key={drink.id}
+            name={drink.name}
+            price={drink.price}
+            description={drink.description}
+          />
+        ))}
+      </div>
       <h2 className="section-header">Sides & Extras</h2>
       <div className="section-category">
         {sides.map((drink) => (
           <Item
-            currImg={currImg}
+            currImg={drink.img}
             key={drink.id}
             name={drink.name}
             price={drink.price}
