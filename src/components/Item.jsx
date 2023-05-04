@@ -12,20 +12,27 @@ function Item({ name, description, price, currImg }) {
 
   const [isLoading, setIsLoading] = useState(true);
 
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="item" style={{ border: display() }}>
+      
+      <img
+        className="item-img"
+        src={currImg}
+        alt=""
+        onLoad={handleImageLoad}
+      />
+
       {(isLoading && name !== "") && (
         <div
           className="skeleton-box"
           style={{ width: "40%", height: "100%" }}
         ></div>
       )}
-      <img
-        className="item-img"
-        src={currImg}
-        alt=""
-        onLoad={() => setIsLoading(false)}
-      />
+
       <div className="item-right">
         <h1>{name}</h1>
         {description && <p className="item-description">{description}</p>}
