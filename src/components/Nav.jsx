@@ -7,7 +7,6 @@ import ClearIcon from "@mui/icons-material/Clear";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {
-  const [isHome, setIsHome] = useState(true);
 
   const path = useLocation();
 
@@ -67,9 +66,10 @@ export default function Nav() {
       </div>
 
       <Link to="/">
-        <figure className="logo-wrapper">
+        {/* <figure className="logo-wrapper">
           <img className="logo" src={Logo} alt="" />
-        </figure>
+        </figure> */}
+        <h1 className="restraunt-name">Cafe Levant</h1>
       </Link>
     </div>
   );

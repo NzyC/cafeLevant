@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "./Dessert.css";
-import currImg from "../assets/breakfast/Avocado Sourdough.jpg";
 import lebKaak from "../assets/in-house-kaak/lebanese-kaak.jpg"
 import levantKaak from "../assets/in-house-kaak/levant-kaak.jpg"
 import aussieKaak from "../assets/in-house-kaak/aussie-kaak.jpg"
+import turkishKaak from "../assets/in-house-kaak/turkish-kaak.jpg"
 import Item from "../components/Item";
 import HulmLogo from "../assets/hulmStudionsLogo.png";
 
@@ -28,7 +28,7 @@ function InHouseKaak() {
       name: "TURKISH",
       description: "Sujuk, capsicum, rocket, tomato and harissa. Add Egg +4",
       price: 16,
-      img: lebKaak
+      img: turkishKaak
     },
     {
       id: 73,
@@ -45,9 +45,6 @@ function InHouseKaak() {
 
   return (
     <div className="drink-section">
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <br />

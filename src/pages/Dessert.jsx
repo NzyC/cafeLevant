@@ -41,9 +41,6 @@ function Dessert() {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
       <h2 className="section-header">Dessert</h2>
       <h3 className="section-options">
         Selection of cakes and pastries available at display

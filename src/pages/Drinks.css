@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -18,19 +20,24 @@
   padding-bottom: 0;
   margin-bottom: 0;
   font-weight: 500;
+  font-family: 'Comfortaa', cursive;
+
 }
 
 .section-options {
   font-size: 16px;
   font-weight: 300;
   margin: 0 0 0 2%;
+  font-family: 'Comfortaa', cursive;
+
 }
 
 .extra-header {
-  margin: 0 0 20px 5%;
+  margin: 10px 0 20px 5%;
   font-size: 20px;
   font-weight: 500;
   border-bottom: 1px solid black;
+  font-family: 'Comfortaa', cursive;
 }
 
 .extra-item-list {
@@ -38,6 +45,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Comfortaa', cursive;
 }
 
 .extra-section {
@@ -61,7 +69,34 @@
 .extra-description {
   margin: 0 0 20px 40px;
   font-style: italic;
+  font-family: 'Comfortaa', cursive;
 }
+
+.filter {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap; /* Prevent line breaks */
+  scroll-behavior: smooth;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.filter::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-item {
+  display: inline-block;
+  padding: 0 4px;
+  margin-right: 10px;
+  width: 100%;
+  background-color: #ccc;
+  white-space: normal; /* Allow line breaks within the items */
+}
+
 
 @media (max-width: 550px) {
   .section-header .section-options {

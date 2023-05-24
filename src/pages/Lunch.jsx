@@ -136,9 +136,6 @@ function Lunch() {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
       <h2 className="section-header">Lunch</h2>
       {/* <h3 className="section-options">11:00AM - 3:30PM</h3> */}
       <h3 className="section-options">Dine | Take-away</h3>
